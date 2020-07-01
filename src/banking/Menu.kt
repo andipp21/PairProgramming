@@ -21,7 +21,7 @@ class Menu {
                         Saldo().tampilSaldo()
                     }
                     "B" -> {
-                        println("Masukan jumlah yang ingin disetorkan : Rp. ")
+                        println("Masukan jumlah yang ingin disetorkan (untuk membatalkan masukan 0): Rp. ")
                         val setoran = input.nextInt()
                         val setor = SetorTunai(setoran)
                         setor.tambahSaldo()
@@ -29,10 +29,10 @@ class Menu {
                     }
 
                     "C" -> {
-                        println("Masukan jumlah yang ingin ditarik : Rp. ")
+                        println("Masukan jumlah yang ingin ditarik (untuk membatalkan masukan 0): Rp. ")
                         val penarikan = input.nextInt()
                         val tarik = TarikTunai(penarikan)
-                        tarik.kurangSaldo()
+                        tarik.tampilSaldo()
                     }
                     "D" -> {
                         println("Terimakasih")
