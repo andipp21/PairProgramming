@@ -1,9 +1,9 @@
-package Banking
+package banking
 
 import java.util.*
 
 class Menu {
-    val input = Scanner(System.`in`)
+    private val input = Scanner(System.`in`)
 
     fun menu(){
             do {
@@ -14,8 +14,8 @@ class Menu {
             D. Keluar
         """.trimIndent())
 
-                print("Silahkan pilih : A/B/C")
-                val cekMenu = readLine();
+                print("Silahkan pilih (A/B/C/D): ")
+                val cekMenu = readLine()
                 when (cekMenu) {
                     "A" -> {
                         Saldo().tampilSaldo()
@@ -23,13 +23,16 @@ class Menu {
                     "B" -> {
                         println("Masukan jumlah yang ingin disetorkan : Rp. ")
                         val setoran = input.nextInt()
-                        SetorTunai(setoran).tampilSaldo()
+                        val setor = SetorTunai(setoran)
+                        setor.tambahSaldo()
+                        setor.tampilSaldo()
                     }
 
                     "C" -> {
                         println("Masukan jumlah yang ingin ditarik : Rp. ")
                         val penarikan = input.nextInt()
-                        TarikTunai(penarikan).tampilSaldo()
+                        val tarik = TarikTunai(penarikan)
+                        tarik.kurangSaldo()
                     }
                     "D" -> {
                         println("Terimakasih")

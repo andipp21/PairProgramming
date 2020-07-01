@@ -1,7 +1,12 @@
-import Banking.CekPin
-import Banking.Menu
+import banking.CekPin
+import banking.Menu
+
+object SaldoBank {
+    var saldo:Int = 500000
+}
 
 fun main(){
+
     println("Selamat Datang di Bank ABC")
     print("Masukan Pin Kamu : ")
     do {
@@ -15,13 +20,4 @@ fun main(){
     } while (hasilCekPin != "sama")
 
     Menu().menu()
-
-//    if(hasilCekPin == "sama") {
-//        Menu().menu()
-//    }else{
-//        println("$hasilCekPin")
-//
-//        print("Masukan kembali Pin Kamu : ")
-//        pin = readLine().toString()
-//    }
 }

@@ -1,4 +1,4 @@
-package Banking
+package banking
 
 class CekPin(val pin:String) {
     private val PIN = "123456"
