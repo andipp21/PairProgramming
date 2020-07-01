@@ -9,8 +9,6 @@ class SetorTunai(val jumlahSetor:Int ) : Saldo() {
             Saldo kamu sekarang:
             Rp. $saldo
         """.trimIndent())
-
-        Menu().menu()
     }
 
 }

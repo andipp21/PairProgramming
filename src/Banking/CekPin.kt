@@ -7,13 +7,23 @@ class CekPin(val pin:String) {
     fun pengecekanPin(): String {
         when {
             pinLength < 6 -> {
-                return "kurang dari 6 char"
+                return """
+                    kurang dari 6 char.
+                    Silahkan Masukan kembali pin kamu : 
+                """.trimIndent()
+
             }
             pinLength > 6 -> {
-                return "Lebih dari 6 char"
+                return """
+                    lebih dari 6 char.
+                    Silahkan Masukan kembali pin kamu : 
+                """.trimIndent()
             }
             pin != PIN -> {
-                return "tidak sama"
+                return """
+                    Pin tidak sama.
+                    Silahkan Masukan kembali pin kamu : 
+                """.trimIndent()
             }
             pin == PIN -> {
                 return "sama"
